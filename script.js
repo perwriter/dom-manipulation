@@ -26,8 +26,18 @@
 // // Get elemts by Class Name
 // var items = document.getElementsByClassName("list-items");
 // query Selector
-var git = document.querySelector("main-body");
+// var git = document.querySelector("main-body");
 
-// Nodes and Parent Notes, Siblings
-// create element
-var newDiv = document.createElement("div");
+// // Nodes and Parent Notes, Siblings
+// // create element
+// var newDiv = document.createElement("div");
+//  createting a text Node
+// Lets Learn about events Listern in the Dom
+// var button = document.getElementById("btn").addEventListener("click", btnClick);
+// function btnClick(e) {
+//   // console.log("Button Clicked");
+//   // document.querySelector(".heading").innerHTML = "Changed";
+//   console.log(e.type);
+//   console.log(e.target);
+//   console.log(e.target.className);
+// }
