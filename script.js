@@ -41,3 +41,7 @@
 //   console.log(e.target);
 //   console.log(e.target.className);
 // }
+//  Adding addEventListener when an action is done you first start by getting the part you want to edit and the we have to refence it using a variable and then we wwill have to put like var.add addEventListener to it /
+// Tis is very good when trying to create that protey of having to track the mouse movement
+// Also another thing you could do with it is when changing the coor pattern for example when having a color pattern change when a user is signed in
+// Its importatnt to note how to use event listernes aSince its

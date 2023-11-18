@@ -1,0 +1,82 @@
+/* Body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+#main-header {
+  background-color: #3ddf3db4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.form-control {
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+#header-title {
+  color: #fff;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* font-size: 15px; */
+}
+
+/* Form styling */
+.form-control {
+  border: 1px solid #44d844;
+}
+
+/* Main card styling */
+#main {
+  background-color: aliceblue;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Title styling */
+.title {
+  color: #000000;
+}
+
+/* Input and button styling */
+.form-inline input,
+.form-inline button {
+  margin-right: 5px;
+}
+
+/* List styling */
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Delete button styling */
+.delete {
+  background-color: #dc354686;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #ff0019;
+}
