@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+      .task-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        background-color: yellow;
+      }
+
+      .task-item input[type="date"] {
+        margin-right: 10px;
+        height: 15px;
+        width: 100px; /* Adjust the width as needed */
+      }
+
+      .task-item input[type="text"] {
+        flex: 1;
+      }
+
+      .task-item button {
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="todoForm">
+      <div class="task-item">
+        <input type="date" id="dateInput" />
+        <input type="text" id="taskInput" placeholder="Enter task" />
+        <button type="button" onclick="addTask()">Add</button>
+      </div>
+    </form>
+
+    <script>
+      function addTask() {
+        // Get the values from the input fields
+        var manuallySelectedDate = $("#dateInput").val();
+        var task = $("#taskInput").val();
+
+        // If a date is manually selected, use it; otherwise, use the current date
+        var date =
+          manuallySelectedDate || new Date().toISOString().split("T")[0];
+
+        // Check if the task is not empty
+        if (task.trim() === "") {
+          alert("Please enter a task.");
+          return;
+        }
+
+        // Create a new task item
+        var taskItem = $('<div class="task-item">');
+        var dateInput = $('<input type="date">').val(date);
+        var taskText = $('<input type="text">').val(task);
+        var deleteButton = $('<button type="button">X</button>').click(
+          function () {
+            $(this).parent().remove();
+          }
+        );
+
+        // Append the new task item to the form
+        taskItem.append(dateInput, taskText, deleteButton);
+        $("#todoForm").append(taskItem);
+
+        // Clear the input fields
+        $("#dateInput").val("");
+        $("#taskInput").val("");
+
+        // Focus on the task input for the next entry
+        $("#taskInput").focus();
+      }
+    </script>
+  </body>
+</html>

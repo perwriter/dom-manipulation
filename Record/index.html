@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Project Record Milk</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <div class="row">
+          <div class="title">
+            <h1>Milk Record</h1>
+          </div>
+          <div class="search">
+            <input
+              type="text"
+              class="search-list"
+              id="filter"
+              placeholder="Search Cow"
+            />
+            <button onclick="cowFilter()" class="btn-search">Search</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-container">
+      <h2 class="Heading">Keep Record For the Cows</h2>
+      <div id="main">
+        <form onsubmit="addRecord(event)" id="addRecord" class="form">
+          <select class="form-control mr-2" id="cow">
+            <option value="Kairetu">Kairetu</option>
+            <option value="Jane">Jane</option>
+            <option value="Mrefu">Mrefu</option>
+          </select>
+          <input type="text" class="Liters" placeholder="Liters" />
+          <input type="date" id="date" name="date" />
+          <input type="time" id="time" name="time" />
+          <input type="submit" class="submit-btn" value="Add" />
+        </form>
+        <h2 class="Heading">Record For the Milk</h2>
+        <ul id="list" class="list-group"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
